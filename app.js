@@ -1,9 +1,10 @@
 const express = require("express");
 const fs = require("fs");
 const app = express();
-const port = 3000;
-const axios = require("axios");
+
 app.use(express.json());
+app.use(express.static("public"));
+
 const tours = JSON.parse(
   fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`)
 );
@@ -15,8 +16,8 @@ app.get("/api/v1/tours", (req, res) => {
     status: "succes",
     rezultate: tours.length,
     data: {
-      tours
-    }
+      tours,
+    },
   });
 });
 
@@ -25,6 +26,7 @@ app.post("/api/v1/tours", (req, res) => {
   res.send("Gata facut");
 });
 
+const port = 3000;
 app.listen(port, () => {
   console.log(`Listening on ${port}`);
 });
