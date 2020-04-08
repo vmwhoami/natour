@@ -28,7 +28,4 @@ app.use("/api/v1/users", useRouter);
 app.use("/api/v1/tours", touRouter);
 
 // starting server
-const port = 3000;
-app.listen(port, () => {
-  console.log(`Listening on ${port}`);
-});
+module.exports = app;
