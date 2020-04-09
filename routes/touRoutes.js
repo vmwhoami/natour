@@ -7,7 +7,7 @@ router.param("id", tourControllers.checkId);
 router
   .route("/")
   .get(tourControllers.getAllTours)
-  .post(tourControllers.createTour);
+  .post(tourControllers.chainenMidleware, tourControllers.createTour);
 router
   .route("/:id")
   .get(tourControllers.getSingleTour)

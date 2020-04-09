@@ -5,9 +5,13 @@ const morgan = require("morgan");
 const touRouter = require("./routes/touRoutes");
 const useRouter = require("./routes/useRoutes");
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(`${__dirname}/public`));
 
-app.use(morgan("dev"));
+console.log(process.env.NODE_ENV);
+
+if (process.env.NODE_ENV === "development") {
+  app.use(morgan("dev"));
+}
 
 app.use((req, res, next) => {
   console.log("hello from my midleware");
@@ -18,14 +22,7 @@ app.use((req, res, next) => {
   next();
 });
 
-//Tour functions
-
-//
-
-//Routes
-
 app.use("/api/v1/users", useRouter);
 app.use("/api/v1/tours", touRouter);
 
-// starting server
 module.exports = app;
