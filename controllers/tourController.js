@@ -6,6 +6,17 @@ const tours = JSON.parse(
 
 let newId = tours[tours.length - 1].id + 1;
 
+exports.checkId = (req, res, next, id) => {
+  console.log(`this is the ${id} id`);
+  if (req.body.id * 1 > tours.length) {
+    return res.status(404).json({
+      status: "error",
+      message: "Tour not found",
+    });
+  }
+  next();
+};
+
 exports.getAllTours = (req, res) => {
   res.status(200).json({
     status: "succes",
@@ -37,12 +48,12 @@ exports.createTour = (req, res) => {
 exports.getSingleTour = (req, res) => {
   const id = req.params.id * 1;
   const tour = tours.find((el) => el.id === id);
-  if (!tour) {
-    return res.status(404).json({
-      status: "error",
-      message: "Tour not found",
-    });
-  }
+  // if (!tour) {
+  //   return res.status(404).json({
+  //     status: "error",
+  //     message: "Tour not found",
+  //   });
+  // }
   res.status(200).json({
     status: "succes",
     data: {
@@ -52,13 +63,6 @@ exports.getSingleTour = (req, res) => {
 };
 
 exports.modifyTour = (req, res) => {
-  if (req.body.id * 1 > tours.length) {
-    return res.status(404).json({
-      status: "error",
-      message: "Tour not found",
-    });
-  }
-
   res.status(200).json({
     status: "succes",
     data: {
@@ -68,13 +72,6 @@ exports.modifyTour = (req, res) => {
 };
 
 exports.deleteTour = (req, res) => {
-  if (req.body.id * 1 > tours.length) {
-    return res.status(404).json({
-      status: "error",
-      message: "Tour not found",
-    });
-  }
-
   res.status(204).json({
     status: "succes",
     data: null,
