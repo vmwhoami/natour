@@ -58,12 +58,7 @@ exports.createTour = (req, res) => {
 exports.getSingleTour = (req, res) => {
   const id = req.params.id * 1;
   const tour = tours.find((el) => el.id === id);
-  // if (!tour) {
-  //   return res.status(404).json({
-  //     status: "error",
-  //     message: "Tour not found",
-  //   });
-  // }
+
   res.status(200).json({
     status: "succes",
     data: {
