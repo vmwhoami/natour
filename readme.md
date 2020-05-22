@@ -28,7 +28,7 @@ $ cd <folder>
 ```
 
 ```
-$ git clone https://github.com/vmwhoami/The-Next-Web
+$ git clone https://github.com/vmwhoami/natour
 
 ```
 
