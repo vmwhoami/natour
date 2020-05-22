@@ -1,13 +1,13 @@
-# The natour app
+# The Natour app
 
-The goal of this project is to learn how to build apis with node 
+The goal of this project is to learn how to build apis with node 
 
 
 This project covers the following
 
 - Installing the node dependencies
 - Performing CRUD operations
-- Understanding the how the backend works
+- Understanding the how the back end works.
 
 ## Built With
 
@@ -21,7 +21,7 @@ This project covers the following
 
 ## Getting Started
 
-To get a local copy of the repository please run the following commands on your terminal:
+To get a local copy of the repository, please run the following commands on your terminal:
 
 ```
 $ cd <folder>
