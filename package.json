@@ -2,6 +2,9 @@
   "name": "natour",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+  "node": "22.13.1"
+},
   "scripts": {
     "run": "nodemon server",
     "run:prod": "NODE_ENV = production nodemon server"
