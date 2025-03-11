@@ -1,7 +1,6 @@
 # The Natour app
 
-The goal of this project is to learn how to build apis with node 
-
+The goal of this project is to learn how to build apis with node
 
 This project covers the following
 
@@ -11,13 +10,11 @@ This project covers the following
 
 ## Built With
 
-
 - Node
 - Express
 - Mongodb
 
 ## Live Demo
-
 
 ## Getting Started
 
@@ -34,14 +31,11 @@ $ git clone https://github.com/vmwhoami/natour
 
 ## Authors
 
-
 **Vitalie Melnic**
 
 - Github: [github](https://github.com/vmwhoami)
 - Twitter: [LinkedIn](https://www.linkedin.com/in/vitalie-melnic-5802198a/)
 - Linkedin: [twitter](https://twitter.com/vmwhoami)
-
-
 
 ## Show your support
 
