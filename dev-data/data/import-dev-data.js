@@ -2,7 +2,8 @@ const fs = require('fs')
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const Tour = require('../../models/tourModel')
-dotenv.config({ path: "./config.env" });
+const something = require('./../')
+dotenv.config({ path: "../../.env" });
 
 
 //conect to database
